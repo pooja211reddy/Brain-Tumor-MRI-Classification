@@ -97,6 +97,10 @@ Streamlit UI
 | F1-score      | Balanced performance |
 
 ---
+## 📊 Dashboard
+![Dashboard](tumor_dashboard.png)
+
+---
 
 ## 📉 Confusion Matrix Insights
 
