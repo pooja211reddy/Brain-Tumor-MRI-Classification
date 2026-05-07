@@ -1,5 +1,5 @@
 # 🧠 Brain Tumor MRI Classification  
-### 🚀 Deep Learning + Transfer Learning + Streamlit Deployment
+###  Deep Learning + Transfer Learning + Streamlit Deployment
 
 ---
 
@@ -202,10 +202,10 @@ Image → Transform → Tensor → Model → Softmax → Prediction
 ## 💡 Real-World Impact
 
 This system can:
-- Assist radiologists 👨‍⚕️  
-- Speed up diagnosis ⏱️  
-- Reduce human error ❌  
-- Enable early detection 🧠  
+- Assist radiologists  
+- Speed up diagnosis  
+- Reduce human error   
+- Enable early detection 
 
 ---
 
