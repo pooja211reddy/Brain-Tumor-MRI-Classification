@@ -87,10 +87,12 @@ if uploaded_file is not None:
             st.pyplot(fig)
         
         with st.expander("📊 Classification Report"):
+            numeric_cols = report_df.select_dtypes(include=["float", "int"]).columns
+
             st.dataframe(
                 report_df.style
-                .background_gradient(cmap="Blues")
-                .format("{:.2f}")
+                .background_gradient(cmap="Blues", subset=numeric_cols)
+                .format({col: "{:.2f}" for col in numeric_cols})
             )
 
 
