@@ -64,7 +64,7 @@ st.write("Upload an MRI image to predict tumor type")
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 
-cm = np.load("/Users/Pooja/Documents/capstone_projects/projects/Tumor/cm.npy")
+cm = np.load("cm.npy")
 class_names = ['glioma', 'meningioma', 'no_tumor', 'pituitary']
 
 report_df = pd.read_csv("/Users/Pooja/Documents/capstone_projects/projects/Tumor/classification_report.csv", index_col=0)
