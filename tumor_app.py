@@ -67,7 +67,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg
 cm = np.load("cm.npy")
 class_names = ['glioma', 'meningioma', 'no_tumor', 'pituitary']
 
-report_df = pd.read_csv("/Users/Pooja/Documents/capstone_projects/projects/Tumor/classification_report.csv", index_col=0)
+report_df = pd.read_csv("classification_report.csv")
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
