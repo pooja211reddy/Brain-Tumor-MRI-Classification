@@ -17,7 +17,7 @@ from sklearn.metrics import classification_report
 # -------------------------------
 class_names = ['glioma', 'meningioma', 'no_tumor', 'pituitary']
 
-device = torch.load("resnet_model.pth", map_location=torch.device("cpu"))
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # -------------------------------
 # 2. Load Model (ResNet)
@@ -27,7 +27,9 @@ def load_model():
     model = models.resnet50(pretrained=False)
     model.fc = nn.Linear(model.fc.in_features, 4)
 
-    model.load_state_dict(torch.load("/Users/Pooja/Documents/capstone_projects/projects/Tumor/resnet_model.pth", map_location=torch.device('cpu')))
+    model.load_state_dict(
+    torch.load("resnet_model.pth", map_location=torch.device("cpu"))
+)
     model.eval()
     return model
 
